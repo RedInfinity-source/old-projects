@@ -1,0 +1,22 @@
+#1 - infinity
+import random
+list1 = ['---','0--','-0-','--0']
+list2 = ['---','0--','-0-','--0']
+list3 = ['---','0--','-0-','--0']
+list4 = ['---','0--','-0-','--0']
+line1 = random.choice(list1)
+line2 = random.choice(list2)
+line3 = random.choice(list3)
+line4 = random.choice(list4)
+h = int(input('how many line would you like : '))
+print(h)
+print(" ")
+print("_______________________________________")
+print(" ")
+for x in range(h):
+    print(random.choice(list1)+random.choice(list2)+random.choice(list3)+random.choice(list2)+random.choice(list1)+random.choice(list2)+random.choice(list3)+random.choice(list2)+random.choice(list1)+random.choice(list2)+random.choice(list3)+random.choice(list2))
+    print(" ")
+print("_______________________________________")
+print(" ")
+print(" ")
+print(" ")
