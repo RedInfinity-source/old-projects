@@ -1,0 +1,69 @@
+import random
+#origonal list
+list_origional = (1,0)
+#a time
+atime = 0
+#b time
+btime = 0
+#abslute number you can change this in edit
+abslue = 10
+#a name
+anumber = 0
+#b name
+bnumber = 0
+while True:
+	#anumber
+	Aname = 'A' + str(anumber)
+	#bnumber
+	Bname = 'B' + str(bnumber)
+	#random 1 or 0
+	list = [random.choice(list_origional)]
+	#a
+	ay = random.randint(0,999)
+	ax = random.randint(0,999)
+	#b
+	b = [random.choice(list_origional)]
+	#random A 1 or 0
+	a = random.choices(list_origional, weights = (ay,ax), k = 1)
+	#if statments for A
+	if a == list:
+		atime = atime + 1
+	if b == list:
+		btime = btime + 1
+	if a != list:
+		atime = atime - 1
+		anumber = anumber + 1
+	if b != list:
+		btime = btime - 1
+		bnumber = bnumber + 1
+		#choicing what to use
+		list1 = ('+','-','1','2')
+		list2 = random.choice(list1)
+		if list2 == '+':
+			ay = ay + random.randint(0,999)
+			ax = ax + random.randint(0,999)
+		if list2 == '-':
+			ay = ay - random.randint(0,999)
+			ax = ax - random.randint(0,999)
+		if list2 == '1':
+			ay = ay - random.randint(0,999)
+			ax = ax + random.randint(0,999)
+		if list2 == '2':
+			ay = ay + random.randint(0,999)
+			ax = ax - random.randint(0,999)
+	#abslute if statement
+	if abslue < atime:
+		print(Aname,'broke the avrige')
+		break
+	if abslue < btime:
+		print(Bname,'broke the avrige')
+		break
+	if abslue < atime and abslue < btime:
+		print(Aname,'broke the avrige')
+		print(Bname,'broke the avrige')
+		break
+	#print bord
+	print(list,'list')
+	print(a,Aname)
+	print(b,Bname)
+	print(" ")
