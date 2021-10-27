@@ -1,0 +1,92 @@
+import random
+list = ['B','I','N','G','O']
+listr = random.choice(list)
+number = random.randint(10,99)
+print(listr,number)
+print('')
+b1 = random.randint(10,99)
+b2 = random.randint(10,99)
+b3 = random.randint(10,99)
+b4 = random.randint(10,99)
+b5 = random.randint(10,99)
+if listr == 'B':
+	if number == b1:
+		b1 = '00'
+	elif number == b2:
+		b2 = '00'
+	elif number == b3:
+		b3 = '00'
+	elif number == b4:
+		b4 = '00'
+	elif number == b5:
+		b5 = '00'
+i1 = random.randint(10,99)
+i2 = random.randint(10,99)
+i3 = random.randint(10,99)
+i4 = random.randint(10,99)
+i5 = random.randint(10,99)
+if listr == 'I':
+	if number == i1:
+		i1 = '00'
+	elif number == i2:
+		i2 = '00'
+	elif number == i3:
+		i3 = '00'
+	elif number == i4:
+		i4 = '00'
+	elif number == i5:
+		i5 = '00'
+n1 = random.randint(10,99)
+n2 = random.randint(10,99)
+n3 = '00'
+n4 = random.randint(10,99)
+n5 = random.randint(10,99)
+if listr == 'N':
+	if number == n1:
+		n1 = '00'
+	elif number == n2:
+		n2 = '00'
+	elif number == n4:
+		n4 = '00'
+	elif number == n5:
+		n5 = '00'
+g1 = random.randint(10,99)
+g2 = random.randint(10,99)
+g3 = random.randint(10,99)
+g4 = random.randint(10,99)
+g5 = random.randint(10,99)
+if listr == 'G':
+	if number == g1:
+		g1 = '00'
+	elif number == g2:
+		g2 = '00'
+	elif number == g3:
+		g3 = '00'
+	elif number == g4:
+		g4 = '00'
+	elif number == g5:
+		g5 = '00'
+o1 = random.randint(10,99)
+o2 = random.randint(10,99)
+o3 = random.randint(10,99)
+o4 = random.randint(10,99)
+o5 = random.randint(10,99)
+if listr == 'O':
+	if number == o1:
+		o1 = '00'
+	elif number == o2:
+		o2 = '00'
+	elif number == o3:
+		o3 = '00'
+	elif number == o4:
+		o4 = '00'
+	elif number == o5:
+		o5 = '00'
+def bord():
+	print(' B ','I ','N ','G ','O '),
+	print(b1,i1,n1,g1,o1),
+	print(b2,i2,n2,g2,o2),
+	print(b3,i3,n3,g3,o3),
+	print(b4,i4,n4,g4,o4),
+	print(b5,i5,n5,g5,o5)
+bord()
