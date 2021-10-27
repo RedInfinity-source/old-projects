@@ -1,0 +1,55 @@
+import random
+x = 0
+one = 0
+zero = 0
+space = 0
+all = 0
+list = ('1','0',' ')
+while True:
+	lu = 1,0
+	l = random.randint(0,1)
+	u = random.randint(0,1)
+	#bot 1
+	if l == 1:
+		word1 = random.choice(list)
+		for x in range(random.randint(1,56)):
+			word = random.choice(list) + word1
+			word1 = word
+		print('bot1: ' + word1)
+	else:
+		word1 = ' '
+		print('bot1: ' + word1)
+	if u == 1:
+		#bot 2
+		for word in word1:
+			if word == '1':
+				one = one + 1
+			if word == '0':
+				zero = zero + 1
+			if word == ' ':
+				space = space + 1
+		all = one + zero + space
+		word2 = random.choice(word1)
+		for x in range(all):
+			word = random.choice(word1) + word2
+			word2 = word
+		x = all
+		#memory
+		none1 = random.choice(list)
+		for x in range(random.randint(1,x)):
+			none = random.choice(list) + none1
+			none1 = none
+		#bot 2 talking
+		memory = (word2,none)
+		none = word2
+		talk = random.choice(memory)
+		print(" ")
+		print('bot2: ' + talk)
+	else:
+		talk = ' '
+		print('bot2: ' + talk)
+	x = 0
+	one = 0
+	zero = 0
+	space = 0
+	all = 0
