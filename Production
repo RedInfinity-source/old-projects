@@ -1,0 +1,29 @@
+import random
+money = 0
+fm = 0
+fg = ' '
+day = 0
+av = 0
+while True:
+	m = input('todays month ')
+	d = input('what is today day ')
+	day = day + 1
+	dm = ' ',m+'/'+d
+	print('at',dm,'how much did you make?')
+	mp = int(input('$'))
+	mn = int(input('how much did you lose? $'))
+	money = money + (mp - mn)
+	money = money
+	print('you made $',money,'today')
+	dm = dm
+	money = money
+	av = money//day
+	m1 = av - 1
+	m2 = av + 5
+	fm = random.randint(m1,m2)
+	fm1 = fm
+	if fm1 <= -1:
+		fg = 'lose'
+	elif fm1 >= 0:
+		fg = 'Gain'
+	print('you will',fg,'$',fm,'tomrrow')
