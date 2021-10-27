@@ -1,0 +1,53 @@
+#expeted outputs. >List, >cookies/>milk/>ice, >how much, >yes/no
+money = 300.00
+milk = 3.75
+cookies = 1.00
+ice = 1.00
+list = input("what would you like to the list ")
+print(" ")
+if list == 'nothing':
+    print("you are going without a list")
+else:
+    print(list)
+print("you have:",money,"dollers")
+get = input('what would you like to get? ')
+print(" ")
+print(get)
+if get == 'milk':
+    howm = int(input('how much would you like? '))
+    print(" ")
+    print(howm)
+    howleft = money - howm * milk
+    print("you have",howleft)
+elif get == 'cookies':
+    howc = int(input('how much would you like? '))
+    print(" ")
+    print(howc)
+    howleft2 = money - howc * cookies
+    print("you have",howleft2)
+elif get == 'cookies and milk':
+    print("sorry you are in the wrong area")
+elif get == 'ice':
+    howi = int(input('how much would you like?' ))
+    print(" ")
+    print(howi)
+    howleft4 = money - howi * ice
+    print("you have",howleft4)
+elif get == 'ice and milk':
+    howim = int(input('how many would you like? '))
+    print(" ")
+    print(howim)
+    howleft3 = money - howim * milk - howim * ice
+    print("you have",howleft3)
+elif get == 'milk and ice':
+    howim = int(input('how many would you like? '))
+    print(" ")
+    print(howim)
+    howleft3 = money - howim * milk - howim * ice
+    print("you have",howleft3)
+else:
+    print("sorry not avaible")
+if money <= 0.0:
+    print("you can not affored anything right now")
+else: 
+    get = input('is there anything else you would like to get? ')
