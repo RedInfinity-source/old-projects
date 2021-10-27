@@ -1,0 +1,22 @@
+print('to detemine if someone is good or bad ai')
+good = 0
+normal = 0
+bad = 0
+print('type "end"" then how you feel about that thing all together when you are done with the list')
+while True:
+	item = input('what is something that you want to list: ')
+	gnb = input('is that good, normal, bad? ')
+	how_much = int(input('try as best as you can to rate 1 - 100 how much it efficts you: '))
+	if gnb == 'good':
+		good = good + how_much
+		good = good
+	if gnb == 'normal':
+		normal = normal + how_much
+		normal = normal
+	if gnb == 'bad':
+		bad = bad + how_much
+		bad = bad
+	if item == 'end':
+		print('good','normal','bad')
+		print(good,'  ',normal,'  ',bad)
+		break
