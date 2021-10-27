@@ -1,0 +1,26 @@
+import random
+a = 0
+b = 0
+c = 0
+d = 0
+e = 0
+k = 0
+while True:
+	y = input('')
+	if y == 'a':
+		a = a + 1
+	elif y == 'b':
+		b = b + 1
+	elif y == 'c':
+		c = c + 1
+	elif y == 'd':
+		d = d + 1
+	elif y == 'e':
+		e = e + 1
+	else:
+		print('invalid text')
+	if y == 'i':
+		list = [a,b,c,d,e]
+		print("                        "+"A ,B ,C ,D ,E")
+		print ("The original list is : " + str(list))
+		print('or choice one of the',random.choice(list))
