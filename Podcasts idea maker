@@ -1,0 +1,21 @@
+import random
+list2 = "relegus","blogs","story","non fiction", "interveiw","gaming"
+list = {
+	"relegus": "relegus",
+	"blogs": "blogs",
+	"story": "story",
+	"non fiction": "non fiction",
+	"interveiw": "interveiw",
+	"gaming": "gaming"
+}
+print('types of podcatst:',list2)
+theme = input('if you would just like a random podcast to be chosen for you type "random". for everyone else type a theme that intrests you the most. > ')
+if theme == 'random':
+	theme = random.choice(list2)
+print('your theme of you podcast is',list[theme])
+bio = input('what is you podcast about? ')
+print('try to think of at lest 100 epicodes for your podcast')
+epicodes = int(input('how many epicodes do you have an idea on what to make? '))
+for x in range(epicodes):
+	epicode = input('what is the name of this epicode? ')
+	boi = input('what is the podcast epicode about: ')
