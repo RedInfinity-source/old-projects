@@ -1,0 +1,21 @@
+import random
+l = 180
+a = 35
+e = 0
+for x in range (a):
+    f = random.randint(0,12)
+    print(l - f)
+    l = l - f
+    if l in range(90 , 180):
+        e = e + 10
+    if l <= 90:
+        e = e + 5
+    if l <= 0:
+        print("enegry depleted")
+        e = e - 5
+        print("e 0",e - 5)
+e = e + 0
+print("enegy left",e)
+print(" ")
+print(" ")
+print(" ")
