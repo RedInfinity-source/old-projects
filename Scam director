@@ -1,0 +1,28 @@
+print('testing if this is a scam')
+f = int(input('how many lines? '))
+r = 0
+for x in range(f):
+    a = input('')
+    t = a
+    a1 = a.split('free')
+    b1 = a.split('limited time')
+    c1 = a.split('click here')
+    d1 = a.split('scam')
+    e1 = a.split('money')
+    a2 = a1
+    b2 = b1
+    c2 = c1
+    d2 = d1
+    e2 = e1
+    a3 = ' '.join(a2)
+    b = ' '.join(b2)
+    c = ' '.join(c2)
+    d = ' '.join(d2)
+    e = ' '.join(e2)
+    print(a)
+    if a3 != t or b != t or c != t or d != t or e != t:
+        print('scam')
+        r = r + 1
+    else:
+        print('not a scam')
+print('the letter is ',r,'% a scam')
