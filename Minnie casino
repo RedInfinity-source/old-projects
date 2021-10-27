@@ -1,0 +1,39 @@
+# 10 - 17
+import random
+l = "carry"
+#lemion
+o = "carry"
+#oringe
+b = "carry"
+#bunana
+c = "carry"
+list = [l,o,b,c]
+a = random.choice(list)
+b = random.choice(list)
+c = random.choice(list)
+d = random.choice(list)
+z = 0
+h = 17
+money1 = 10
+money = int(input('please insert money to play'))
+print(" ")
+if money1 > money:
+    print('sorry you can not play')
+elif money >= h:
+    print('to much money')
+else:
+    print("-0--0--0--0--0--0--0--0--0--0--0--0-")
+    print("",a,"|",b,"|",c,"|",d)
+    print("------------------------------------")
+if a == 'carry':
+   z + 1
+if b == 'carry':
+    z + 1
+if c == 'carry':
+    z + 1
+if d == 'carry':
+    z + 1
+if z == 4:
+    print("winner")
+else:
+    print("sorry mabey next time")
