@@ -1,0 +1,23 @@
+import random
+#outside
+list3 = "outside at the feild","back yeard","frount yeard","facing the animals","facing at the road","film the river","film the chickens roming around"
+#inside
+list5 = "filming you coding","film you making a podcast","film you editing film","film the outside through the window"
+while True:
+	print("")
+	list = "outside","inside"
+	list2 = random.choice(list)
+	if list2 == "outside":
+		list4 = random.choice(list3)
+		print("film:",list4)
+	if list2 == "inside":
+		list6 = random.choice(list5)
+		print("film:",list6)
+	list6 = random.choice(list5)
+	list4 = random.choice(list3)
+	list7 = list4,list6
+	list8 = random.choice(list7)
+	print('or',list8)
+	a = input("do you like the idea [y/n] ")
+	if a == 'y':
+		break
