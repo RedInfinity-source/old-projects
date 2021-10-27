@@ -1,0 +1,32 @@
+import random
+import math
+for x in range(random.randint(1,999)):
+    list = ['+','-','÷','x','%','√','^','!']
+    a = random.choice(list)
+    b = random.randint(0,999)
+    c = random.randint(0,999)
+    if a == '+':
+        print(b,'+',c,'=')
+        print(b+c)
+    if a == '-':
+        print(b,'-',c,'=')
+        print(b-c)
+    if a == '÷':
+        print(b,'÷',c,'=')
+        print(b/c)
+if a == 'x':
+    print(b,'x',c,'=')
+    print(b*c)
+    if a == '%':
+        print(b,'%','=')
+        print(b*100)
+    if a == '√':
+        print(b,'√','=')
+        print(math.sqrr(b))
+    if a == '^':
+        print(b,'^',c,'=')
+        print(b**c)
+    if a == '!':
+        print(a,'!','=')
+    print(' ')
+    print(' ')
