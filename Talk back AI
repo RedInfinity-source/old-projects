@@ -1,0 +1,18 @@
+import random
+a1 = ' '
+while True:
+	list1 = a1,'hi','by','agree','mabye','disagree','half','full','what','were','when','why','how','if','do','go','stay','leave','contune','not','sup','i am doing well','are you ok',random.choice(a1)
+	sent1 = random.choice(list1)
+	list = random.choice(list1)
+	for x in range(random.randint(0,9)):
+		sent = random.choice(list)
+		sent = sent,random.choice(list)
+		sent1 = sent
+	halfa = random.choice(a1)
+	halfl = random.choice(sent1)
+	recponce1 = list,sent,halfa,halfl
+	recponce = random.choice(recponce1)
+	a = input('> ')
+	a = a,a1
+	a1 = a
+	print('>> ',recponce)
