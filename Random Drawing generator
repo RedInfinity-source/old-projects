@@ -1,0 +1,7 @@
+import random
+a = '🏠'
+b = '⬛'
+for x in range(random.randint(0,999)):
+    list = a,b,a,b
+    ll = random.choice(list)
+    print(b+random.choice(list)+random.choice(list)+random.choice(list)+random.choice(list)+random.choice(list)+random.choice(list)+random.choice(list)+random.choice(list)+random.choice(list)+random.choice(list)+random.choice(list)+random.choice(list)+b)
