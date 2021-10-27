@@ -1,0 +1,18 @@
+import random
+n = 66
+print('The computer will provide a number between 1 - 9 and you will guess what number comes next it has to be 1 - 9. if you chose the wrong number the computer will gain more turns. ex: if the coputer choses 8 and you choise 1 and you were wrong the computer gains the next random number in turns ex: the turn will be 5 so if you were wrong the computer will gain 5 more turns')
+print('if you were right the computer will lose that many turns ex: computer provides 7 and the next number is 5 you guess 5 the computer will lose 5 turns')
+while True:
+	fn = random.randint(1,9)
+	sn = random.randint(1,9)
+	print(fn)
+	n = n - fn
+	if n <= 0:
+		print('you win')
+		break
+	yg = int(input(''))
+	if yg != sn:
+		print('wrong the number was',sn)
+		n = n + sn
+	else:
+		n = n - sn
