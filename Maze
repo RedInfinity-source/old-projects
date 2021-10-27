@@ -1,0 +1,26 @@
+import random
+a = input('')
+c = a
+s = ' '
+st = random.randint(1,24)
+for x in range(st):
+    a = a + a
+    a = a
+print(a+'start')
+a = c
+s = ' '
+for x in range(42):
+    for x in range(random.randint(10,30)):
+        a = a + a
+        s = s + ' '
+        a = a
+        s = s
+    print(s+a)
+    a = c
+    s = ' '
+print('')
+fi = random.randint(1,24)
+for x in range(fi):
+    a = a + a
+    a = a
+print(a+'finish')
