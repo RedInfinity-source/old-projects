@@ -1,0 +1,72 @@
+import random
+cards = 52
+sc = cards//2
+truns = cards//2
+ytruns = cards//2
+y4 = 0
+v4 = 0
+while True:
+	cvc = random.randint(2,14)
+	yvc = random.randint(2,14)
+	print('The computer draws a card, the value of the card is',cvc,'it has',truns - 1,'truns left')
+	truns = truns - 1
+	a = 'yes'
+	if a == 'yes' or a == 'y':
+		print('you draw a card, the value of the card is',yvc,'you have',ytruns - 1,'turns left')
+		ytruns = ytruns - 1
+	if cvc > yvc:
+		print('computers card is bigger than your cards value')
+		truns = truns + 1
+	if cvc < yvc:
+		print('your cards value is bigger than the computers cards value you ganed 1 extra turn')
+		ytruns = ytruns + 1
+	if cvc == yvc:
+		print('WAR')
+		v1 = random.randint(2,14)
+		v2 = random.randint(2,14)
+		v3 = random.randint(2,14)
+		y1 = random.randint(2,14)
+		y2 = random.randint(2,14)
+		y3 = random.randint(2,14)
+		print('The computer draws 3 and sets the last card face up, the value of the card is',v3)
+		print('You draw out 3 cars with the last card facing up the cards value is',y3)
+		if v3 > y3:
+			print('The computers card value is bigger than yours it has gained 3 turns')
+			truns = truns + 3
+			ytruns = ytruns - 3
+		if v3 < y3:
+			print('your card value is bigger than the computers card. you have gained 3 turns')
+			ytruns = ytruns + 3
+			truns = truns - 3
+		if v3 == y3:
+			print('another tye')
+			print('your cards value all together is',y1+y2+y3)
+			y4 = y1+y2+y3
+			print('the computers cards value all togther is',v1+v2+v3)
+			v4 = v1+v2+v3
+		if v4 > y4:
+			print('the  computer won this round and gained 3 turns')
+			truns = truns + 3
+		if v4 < y4:
+			print('your cards values won you gained 3 turns')
+		if truns <= -0:
+			print('how many turns is left')	
+			print('yours',ytruns)
+			print('computers',truns)
+			print('')
+			print('you have won the game')
+			break
+		if ytruns <= -0:
+			print('how many turns is left')	
+			print('yours',ytruns)
+			print('computers',truns)
+			print('')
+			print('the computer lost the game')
+			break
+		if ytruns <= -0 and truns <= -0:
+			print('how many turns is left')	
+			print('yours',ytruns)
+			print('computers',truns)
+			print('')
+			print('you bouth lost the game')
+	print('')
