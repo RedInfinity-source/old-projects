@@ -1,0 +1,28 @@
+import random
+c = 0
+cx = 0
+a = input('')
+b = input('zoom in,zoom out ')
+if b == 'zoom in':
+	while True:
+		c = c + 1
+		x1 = random.randint(0,66)
+		print(a * x1)
+		cx = cx + x1
+		if c == 1000000:
+			cx = cx
+			print('the avrige',cx//1000000)
+			break
+if b == 'zoom out':
+	c = 0
+	cx = 0
+	while True:
+		c = c + 1
+		x1 = random.randint(33,54)
+		x2 = random.randint(0,13)
+		print(' ' * x2 + a * x1)
+		cx + cx + (x1 - x2)
+		if c == 1000000:
+			cx = cx
+			print('the avrige',cx//1000000)
+			break
