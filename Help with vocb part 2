@@ -1,0 +1,68 @@
+import random
+f1 = ' '
+a = 0
+b = 0
+c = 0
+d = 0
+e = 0
+k = 0
+g1 = 'a','b','c','d'
+g = random.choice(g1)
+while True:
+		#acsessing vocab
+		print('not finnished')
+		#finding what vocab to do
+		f = input('manual (m) or automatic (a) ')
+		if f == 'manual' or f == 'm':
+			f = input('name of the vocabulary ')
+			rvc = f,f1
+			f1 = rvc
+			if f == 'none':
+				print('not finnished')
+		if f == 'automatic' or f == 'a':
+			print(random.choice(rvc))
+		#deticting what to use
+		d = input('normal (n), picture (p), voice (v) ')
+		if d == 'voice' or d == 'v':
+			#voice part
+			print('not finnished')
+		if d == 'picture' or d == 'p':
+			#if picure vocab
+			print('not finnished')
+		if d  == 'normal' or d == 'n':
+			list = [a,b,c,d]
+			lis = k
+			print("                        "+"A ,B ,C ,D ")
+			print ("The original list is : " + str(list))
+			print('or choice', str(g))
+			y = input('')
+			if y == 'a':
+				a = a + 1
+				if y != g and g == 'a':
+					k = k - 0
+			elif y == 'b':
+				b = b + 1
+				if y != g and g == 'b':
+					k = k - 0
+			elif y == 'c':
+				c = c + 1
+				if y != g and g == 'c':
+					k = k - 0
+			elif y == 'd':
+				d = d + 1
+				if y != g and g == 'a':
+					k = k - 0
+			else:
+				print('invalid text')
+			if k == a:
+				g = 'a'
+			elif k == b:
+				g = 'b'
+			elif k == 'c':
+				g = 'c'
+			elif k == 'd':
+				g = 'd'
+			else:
+				g = random.choice(g1)
+			if y == 'quit':
+				print('quit out of normal vocb')
