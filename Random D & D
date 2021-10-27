@@ -1,0 +1,169 @@
+import random
+#you
+level = 1
+health = level * 10
+gold = 0
+attack = random.randint(0,health)
+exp = 0
+#crecher
+y = 9
+crecher_level = random.randint(1,y)
+crecher_health = crecher_level * 10
+crecher_attack = random.randint(0,			crecher_health)
+drop = 100 - random.randint(0,100)
+#list
+list1 = ('nothing','crecher','gold','chest','person')
+a = ''
+#quests
+chestnum = 0
+levelnum = level
+goldnum = gold
+creachernum = 0
+person = 0
+quest = ''
+while True:
+	if health <= 0:
+		print('you died')
+		print('you lost some gold, you have',gold,'left')
+		gold -= random.randint(0,gold)
+		print('your are now back to level one')
+		level = 1
+		health = level * 10
+	if exp == 100:
+		print('you leveled up')
+		level += 1
+		print('you are at level',level)
+		health = level * 10
+		print('your health is now at',health)
+		exp = 0
+		if level > 9:
+			y = y * 2
+	list = random.choices(list1,weights = (50,10,25,5,1),k = 1)
+	if list == ['person'] and person == 0:
+		list = ['nothing']
+	if list == ['chest'] or list == ['crecher']:
+		a = 'a '
+	else:
+		a = ''
+	print('you found',a + str(list))
+	if list == ['chest']:
+		alpha = input('would you like to look inside? ')
+		alpha = alpha.strip()
+		if alpha == 'yes':
+			chestnum += 1
+			object1 = ('nothing','crecher','gold','exp')
+			object = random.choices(object1,weights = (10,25,20,10),k = 1)
+		if object == ['crecher']:
+			a = 'a '
+		else:
+			a = ''
+		print('in the chest you found',a + str(object))
+	if list == ['gold'] or object == ['gold']:
+		G = 100 - random.randint(0,99)
+		print('you found',G,'gold')
+		gold += G
+	if object == ['exp']:
+		ex = 100 - random.randint(0,99)
+		print('you found',ex,'exp')
+		exp += ex
+	if list == ['crecher'] or object == ['crecher']:
+		time = 0
+		fight = True
+		while fight:
+			time += 1
+			if time == 1:
+				crecher_level = random.randint(1,9)
+				crecher_health = crecher_level * 10
+				drop = 100 - random.randint(0,100)
+			print('you: health',health,'level',level)
+			list2 = ('attack','block','run away')
+			print(list2)
+			alpha = input('what would you like to do? ')
+			alpha = alpha.strip()
+			if alpha == 'run away':
+				run = random.randint(0,10)
+				if run == 100:
+					print('you have secssefully ran away')
+					fight = False
+				if run != 100:
+					print('you failed to run away')
+			if alpha == 'block':
+				block = random.randint(0,9)
+			if alpha == 'attack':
+				attack = random.randint(0,health)
+			crecherlist = random.choices(list2,weights = (50,25,10),k = 1)
+			print('the crecher:',crecherlist)
+			if crecherlist != ['run away']:
+				print('crecher: health',crecher_health,'level',crecher_level)
+			if crecherlist == ['block']:
+				if alpha == 'attack':
+					crecher_block = random.randint(0,9)
+					crecher_health = (crecher_block - attack)
+			if crecherlist == ['attack']:
+				crecher_attack = random.randint(0,			crecher_health)
+				if alpha == 'block':
+					health = (block - crecher_attack)
+				else:
+					health -= crecher_attack
+			if crecherlist == ['run away']:
+				print('you found',drop,'gold')
+				gold += drop
+				time = 0
+				fight = False
+			if crecher_health <= 0:
+				creachernum += 1
+				print('you win\nyou gained',drop,'gold and',drop * 2,'exp')
+				gold += drop
+				exp += (drop * 2)
+			if health <= 0:
+				print('you loose')
+				fight = False
+	if list == ['person'] and person == 0:
+		personA = ('quest','dead')
+		person = random.choice(personA)
+		if person == 'dead':
+			person = 0
+			print('the person was just a dead body')
+		if person == 'quest':
+			list3 = ('crechers','gold','level','chests')
+			questR= random.choice(list3)
+			number = random.randint(2,level * 2)
+			if questR == 'crechers':
+				quest = 'please kill ' + str(number),' creachers'
+			if questR == 'gold':
+				quest = 'please give me some gold i need ' + str(number)
+			if questR == 'level':
+				quest = 'i will give you ' + str(number) + ' gold if you are a level ' + str(number)
+			if questR == 'chests':
+				quest = 'open ' + str(number) + ' of chests, i need to store my valubals'
+			print('i have a favor for you. ' + str(quest))
+			alpha = input('do you exept the quest? ')
+			alpha = alpha.strip()
+			if alpha  != 'yes':
+				person = 0
+				chestnum = 0
+				levelnum = level
+				goldnum = gold
+				creachernum = 0
+				person = 0
+			if alpha == 'yes':
+				per = random.randint(0,9)
+				exp += per
+				print('thank you so much traveler best wishes to you! ')
+				print('you reseved',per,'exp')
+				if chestnum > number and questR == 'chests':
+					print('you have completed the quest')
+					exp = 100 - random.randint(0,9)
+					person = 0
+				if levelnum > number and questR == 'level':
+					print('you have completed the quest')
+					exp = 100 - random.randint(0,9)
+					person = 0
+				if goldnum > number and questR == 'gold':
+					print('you have completed the quest')
+					exp = 100 - random.randint(0,9)
+					person = 0
+				if creachernum > number and questR == 'crechers':
+					print('you have completed the quest')
+					exp = 100 - random.randint(0,9)
+					person = 0
