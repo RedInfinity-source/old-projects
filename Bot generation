@@ -1,0 +1,40 @@
+import random
+#list
+list = (0,1)
+#time
+btime = random.randint(1,999)
+atime = random.randint(1,999)
+#bots
+ax = random.randint(1,999)
+ay = random.randint(1,999)
+bx = random.randint(1,999)
+by = random.randint(1,999)
+while True:
+	#time limmit
+	btime = btime - 1 
+	atime = atime - 1
+	if atime == 0:
+		atime = random.randint(1,999)
+		ax = random.randint(1,999)
+		ay = random.randint(1,999)
+	elif btime == 0:
+		btime = random.randint(1,999)
+		bx = random.randint(1,999)
+		by = random.randint(1,999)
+	elif btime == 0 and atime == 0:
+		print(' ' * 52 + 'generation' + ' ' * 52)
+		btime = random.randint(1,999)
+		atime = random.randint(1,999)
+		ax = random.randint(1,999)
+		ay = random.randint(1,999)
+		bx = random.randint(1,999)
+		by = random.randint(1,999)
+		a = a + a
+		a = a - b
+		b = b + a
+		b = b - b
+		break
+	#a and b bots
+	a = random.choices(list, weights = (ax,ay),k = 1)
+	b = random.choices(list, weights = (bx,by), k = 1)
+	print(a,' ' * 55,b)
