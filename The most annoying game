@@ -1,0 +1,20 @@
+import random
+day = 1
+day2 = 0
+robot = '1 k robot'
+while True:
+	new_robot = day,'k robot'
+	day2 = day2 + 1
+	day = day + 1
+	if day2 == 5:
+		print('ADD: a new update has accored the all new',new_robot,'is here')
+		a = input('would you like the new robot ')
+		if a == 'yes':
+			robot = new_robot
+	list = 'it needs a new upgread','it needs a new case','it needs a new update','it needs a new charger','it needs a new screen','it needs new intenalls','you need to fix the internals','you need to change the charging port','the parts stoped being mass produced','the robot is to old','its rusty','it got damiged','it turned evil','it ran out of energy','the robot ran away','its to expensive to fix','error 105','to little wifi is avable','to much wifi is avable which makes the robot confused and not work','it breaks into pices','it is mad at you now','it refusis to be fixed by you'
+	list2 = random.choice(list)
+	print(robot,'has a problem:',list2)
+	a = input('> ')
+	if a == 'get a new robot' or a == 'get rid of the old robot' or a == 'change the hole thing' or a == 'change it out' or a == 'replace the robot' or a == 'get new robot' or a == 'get the new robot' or a == 'buy a new robot':
+		print('you got the new',new_robot)
+		robot = new_robot
