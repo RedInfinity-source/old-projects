@@ -1,0 +1,106 @@
+#food
+#sides
+#drinks
+#yes(x random 1,5)
+#upgrades, or buy
+#how much
+import random
+#serving
+money = 0
+drinks = 100
+food = 100
+o = input('order list is:')
+o.split(' ')
+print('')
+s = input('the sides are:')
+s.split(' ')
+print('')
+d = input('the dinks are:')
+d.split(' ')
+print('')
+print('menue')
+print('Food')
+print(o)
+print('Sides')
+print(s)
+print('Drinks')
+print(d)
+print('')
+c = 5
+p = random.randint(0,c)
+print(p,'people/person came in')
+for x in range(5):
+    print('')
+    co = ('food','drinks')
+    c = random.choice(co)
+    orders = random.choice(o.split(' '))
+    sides = random.choice(s.split(' '))
+    dinks = random.choice(d.split(' '))
+    sizes = ['lage','small']
+    size = random.choice(sizes)
+    if c == 'food' or c == 'drinks':
+        happiness = random.randint(0,10)
+        if happiness <= 5:
+            print('the customer seems to be unhappy')
+            tip = random.randint(0,20)
+        if happiness >= 6:
+            print('the customer seems to be happy')
+            tip = random.randint(0,40)
+        print('the customer wants',c)
+        if c == 'food':
+            food = food - 1
+            print('the customer orders are:',orders,'with',sides)
+        if c == 'drinks':
+            drinks = drinks - 1
+            print('the customer orders are:',dinks,'size is',size)
+        print('the customer lefft:','$',tip,'in tips')
+        you = input('would you like to clean?')
+        if you == 'yes':
+            happiness = happiness + 1
+        if you == 'no':
+            happiness = happiness - 1
+            tip = tip
+    money = money + tip
+money = money
+#ordring food and drinks and upgrades
+print('')
+print('you have:','$',money)
+print('would you like to upgrade or buy more food or drinks?')
+you = input ('')
+print(you)
+if you == 'Drinks':
+    you = int(input('how many'))
+    print('')
+    print(you)
+    money = money - you*10
+    print('you have','$',money,'left')
+    if money <= 0:
+        print('you can not afford')
+    else:
+        print('you have',drinks + you,'Drinks')
+if you == 'Food':
+    you = int(input('how many'))
+    print('')
+    print(you)
+    money = money - you*10
+    print('you have','$',money,'left')
+    if money <= 0:
+        print('you can not afford')
+    else:
+        print('you have',food + you,'food')
+if you == 'Upgrades':
+    print('more chairs')
+    you = input('')
+c = 5
+if you == 'more chairs':
+    you = int(input('how many'))
+    print('')
+    print(you)
+    money = money - you*20
+    print('you have','$',money,'left')
+    if money <= 0:
+        print('you can not afford')
+    else:
+        print('you have',c + you,'Chairs')
+        c = c + you
+        c = c
