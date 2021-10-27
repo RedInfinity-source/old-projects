@@ -1,0 +1,23 @@
+import random
+t = int(input())
+n = 0
+l = t**2
+s = -t
+print('largest number',l,'smallest number',s)
+while True:
+	a = random.randint(s,l)
+	na = a,n
+	print(a,n)
+	if a != t:
+		n = n + 1
+		if a > t:
+			a = a - 1
+			a = a
+		if a < t:
+			a = a + 1
+			a = a
+		if a == t:
+			na = na
+			na = 'ai number',n,'has guessd your number. your number was',a
+			print(na)
+			break
