@@ -1,0 +1,66 @@
+#expeted outputs. >Yes/no, a1,a2,a3 , b1,b2,b3
+import random
+health = 100
+money = 0
+ors = ['rocks','gold','iron','rubys','dimond']
+orsr = random.choice(ors)
+day = 1
+a = input('would you like to mine')
+print(" ")
+print(a)
+print("> day:",day)
+print("money",money," ","health",health)
+if health <= 0:
+    print("you lose")
+if a == 'yes':
+    print("you found",orsr)
+if orsr == 'rocks':
+    print("money:",money + 1)
+    money = 1
+elif orsr == 'iron':
+    print("> money:",money + 10,"health:",health - 5)
+    money = 10
+elif orsr == 'gold':
+    print("> money:",money + 20,"health:",health - 10)
+    money = 20
+elif orsr == 'rubys':
+    print("money:",money + 50,"health:",health - 25)
+    money = 50
+elif orsr == 'dimond':
+    print("money:",money + 80,"health:",health - 40)
+    money = 80
+else:
+    print("wrong input")
+print(" ")
+a = input('would you like to shop?')
+print(" ")
+print(a)
+print(" ")
+if a == 'yes':
+    print("upgrades")
+    print("_________________________________________")
+drillupa = input('a upgrades a1,a2,a3')
+print(" ")
+print(drillupa)
+if drillupa == 'a1':
+    print("money =",money - 10)
+    money = money - 10
+elif drillupa == 'a2':
+    print("money =",money - 20)
+    money = money - 20
+elif drillupa == 'a3':
+    print("money =",money - 30)
+    money = money - 30
+drillupb = input('a upgrades b1,b2,b3')
+print(" ")
+print(drillupb)
+if drillupb == 'b1':
+    print("money =",money - 10)
+    money = money - 10
+elif drillupb == 'b2':
+    print("money =",money - 20)
+    money = money - 20
+elif drillupb == 'b3':
+    print("money =",money - 30)
+    money = money - 30
+print("you have",money,"left")
