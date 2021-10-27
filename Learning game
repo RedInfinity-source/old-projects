@@ -1,0 +1,99 @@
+#3,6,9,12
+#22,21,1620
+#Mitochondria,Hydrogen,Oxygen
+#September 17, 1787,December 16, 1773,October 28, 1886,
+#relating to England or its people or language. noun, My name is Bob.,a mass of whirling fluid or air, especially a whirlpool or whirlwind
+number = 0
+number = int(input('number '))
+print(number)
+if number >= 0:
+    print("you are in the game")
+if number == 3:
+    print("math")
+    m = int(input('4 + 18 = '))
+    print(m)
+    if m == 22:
+        print("correct")
+        m1 = int(input('77 - 56 = '))
+        print(m1)
+        if m1 == 21:
+            print("correct")
+            m2 = int(input('36 × 45 = '))
+            print(m2)
+            if m2 == 1620:
+                print("correct")
+            else:
+                print("incorrect")
+        else:
+            print("incorrect")
+    else: 
+        print("incorrect")
+if number == 6:
+    print("science")
+    s = input('what is the powerhouse of the cell?')
+    print(" ")
+    print(s)
+    if s == 'Mitochondria':
+        print("correct")
+        s1 = input('what is the name of the first element in the periodic table')
+        print(" ")
+        print(s1)
+        if s1 == 'Hydrogen':
+            print("correct")
+            s2 = input('what is the element O repersents')
+            print(" ")
+            print(s2)
+            if s2 == 'Oxygen':
+                print("correct")
+            else:
+                print("sorry that is not correct")
+        else:
+            print("sorry that is not correct")
+    else:
+        print("sorry that is not correct")
+if number == 9:
+    print("history")
+    h = int(input('when was the constitution written'))
+    print(" ")
+    print(h)
+    if h == 'September 17, 1787':
+        print("correct")
+        h1 = input('when was the boston tea party')
+        print(" ")
+        print(h1)
+        if h1 == 'December 16, 1773':
+            print("correct")
+            h2 = input("when was the statue of liberty made")
+            if h2 == 'October 28, 1886':
+                print("correct")
+            else:
+                print("nope")
+        else:
+            print("nope")
+    else:
+        print("nope")
+if number == 12:
+    print("english")
+    e = input('what is the definition of English')
+    print(" ")
+    print(e)
+    if e == 'relating to England or its people or language. noun':
+        print("correct")
+        e1 = input('change the grammer: my name is bob.')
+        print(" ")
+        print(e1)
+        if e1 == 'My name is Bob.':
+            print("correct")
+            e2 = input('what is the definition of vortex')
+            if e2 == 'a mass of whirling fluid or air, especially a whirlpool or whirlwind.':
+                print("correct")
+            else:
+                print("sorry but no")
+        else:
+            print("sorry but no")
+    else:
+        print("sorry but no")
+if number <= 0:
+    print("you are not in the game")
+if number >= 100:
+    print("but the number is to big")
