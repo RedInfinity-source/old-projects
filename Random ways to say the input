@@ -1,0 +1,13 @@
+#no more than one line input
+import random
+a = input('')
+print('your original input:',a)
+print(" ")
+for x in range(random.randint(0,100)):
+    a.split(' ')
+    b = random.choice(a.split(' '))
+    c = random.choice(a.split(' '))
+    d = random.choice(a.split(' '))
+    x = [b,c,d,' ',b,c,d]
+    x1 = random.choice(x)
+    print(x1,b,c,d)
