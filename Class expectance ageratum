@@ -1,0 +1,27 @@
+import random
+class_size_limit = int(input('class size limit > '))
+class_size = 0
+day = 0
+day_limit = int(input('how manny days intel the start of the school year > '))
+student_number = 0
+aplicents = 0
+axepted = 0
+while True:
+	student = random.randint(0,61)
+	print(student,'%')
+	student_number = student_number + 1
+	if student == 61:
+		print('axepted')
+		axepted = axepted + 1
+		class_size = class_size + 1
+	else:
+		aplicents = aplicents + 1
+	if class_size >= class_size_limit:
+		print('the class size is met.',aplicents,'has aplyed and',axepted,'got axepted')
+		break
+	if student_number == 100:
+		day = day + 1
+		student_number = 0
+	if day >= day_limit:
+		print('school started',aplicents,'students applyed',axepted,'got axepted')
+		break
