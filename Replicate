@@ -1,0 +1,8 @@
+a = input('what letter/word would you like to be repeted ')
+b = int(input('how many times '))
+c = input('stragt down (s) or across (a) ')
+if c == 's':
+	for x in range(b):
+		print(a)
+if c == 'a':
+	print(a * b)
