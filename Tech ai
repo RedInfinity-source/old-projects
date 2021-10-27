@@ -1,0 +1,30 @@
+import random
+nq = int(input('how many question '))
+q1 = 'no questions'
+ma1 = 'defalt'
+a1 = ' '
+for x in range(nq):
+	q = input('question: ')
+	q = q,q1
+	q1 = q
+for x in range(nq):
+	ma = input('what is the corrcet anwers ')
+	ma = ma,ma1
+	ma1 = ma
+	for x in range(3):
+		a = input('answer choice ')
+		a = a,a1
+		a1 = a
+ac = random.choice(ma1),random.choice(a1)
+taia1 = 'no ac'
+while True:
+	taiq = random.choices(q1)
+	if taiq != 'no questions':
+		for x in range(4):
+			taia = random.choices(ac)
+			taia = taia,taia1
+			taia1 = taia
+			ac = taia1
+		print(taiq)
+		print(ac)
+		break
