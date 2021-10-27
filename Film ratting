@@ -1,0 +1,66 @@
+#time
+time = 0
+t = int(input('how long is the film '))
+tt = round(t/3)
+print('this will be ratted in 3 parts')
+print('part 1 00',tt)
+time = time + tt
+time1 = time
+print('part 2',time,time+tt)
+time = time + tt
+time2 = time
+print('part 3',time,time+tt)
+time = time + tt
+time3 = time
+#camra
+c = 0
+print('a ratting between 1-5 how was the camra between 00 and',time1)
+a = int(input(''))
+c = c + a
+print('a ratting between 1-5 how was the camra between',time1,'and',time2)
+a = int(input(''))
+c = c + a
+print('a ratting between 1-5 how was the camra between',time2,'and',time3)
+a = int(input(''))
+c = c + a
+c = c
+print('the avrige camra radding is:',c/3)
+#acting quality
+ac = 0
+print('a ratting between 1-5 how was the acting between 00 and',time1)
+a = int(input(''))
+ac = ac + a
+print('a ratting between 1-5 how was the acting between',time1,'and',time2)
+a = int(input(''))
+ac = ac + a
+print('a ratting between 1-5 how was the acting between',time2,'and',time3)
+a = int(input(''))
+ac = ac + a
+ac = ac
+print('the avrige camra radding is:',ac/3)
+#sound
+s = 0
+print('a ratting between 1-5 how was the acting between 00 and',time1)
+a = int(input(''))
+s = s + a
+print('a ratting between 1-5 how was the sound between',time1,'and',time2)
+a = int(input(''))
+s = s + a
+print('a ratting between 1-5 how was the sound between',time2,'and',time3)
+a = int(input(''))
+s = s + a
+s = s
+print('the avrige sound radding is:',s/3)
+#discription
+d = 0
+di = input('duse it have a discription')
+if di == 'y':
+	d = d + 1
+	print('you have a discription')
+if di == 'n':
+	d = d + 0
+#points
+points = 0
+points = points + d + s + ac + c
+print('points that was calculated',points)
+print('43/',points)
