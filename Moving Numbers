@@ -1,0 +1,61 @@
+import random
+q = random.randint(0,9)
+while True:
+    a = random.randint(0,9)
+    d = random.randint(0,9)
+    b = random.randint(0,9)
+    c = random.randint(0,9)
+    d = random.randint(0,9)
+    e = random.randint(0,9)
+    f = random.randint(0,9)
+    g = random.randint(0,9)
+    if q != a and q != b and q != c and q != d and q != e and q != f:
+    	q = q + 1
+    print('  ','1,2,3,4,5,6,7')
+    print('  ',a,b,c,d,e,f,g)
+    s = int(input(q))
+    print('  ' * s,q)
+    if s > 7:
+    	print('incorect user input')
+    if s == 0:
+    	print('incorect user input')
+    if s == 1:
+    	if q == a:
+    		q = q + 1
+    	else:
+    		q = q - a
+    if s == 2:
+    	if q == b:
+    		q = q + 1
+    	else:
+    		q = q - b
+    if s == 3:
+    	if q == c:
+    		q = q + 1
+    	else:
+    		q = q - c
+    if s == 4:
+    	if q == d:
+    		q = q + 1
+    	else:
+    		q = q - d
+    if s == 5:
+    	if q == e:
+    		q = q + 1
+    	else:
+    		q = q - e
+    if s == 6:
+    	if q == f:
+    		q = q + 1
+    	else:
+    		q = q - f
+    if s == 7:
+    	if q == g:
+    		q = q + 1
+    	else:
+    		q = q - g
+    print(q)
+    if q <= 0:
+    	print('you lost the game')
+    	q = random.randint(0,9)
+    q = q
