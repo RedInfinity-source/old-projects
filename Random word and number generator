@@ -1,0 +1,35 @@
+import random
+abc = [' ','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',' ']
+money = 250
+none = ' '
+while True:
+	print('you have $' + str(money))
+	price = random.randint(0,1000)
+	word1 = random.choice(abc)
+	for x in range(random.randint(0,15)):
+		word = word1 + random.choice(abc)
+		word1 = word
+	print('the name of the place is: \n"' + word1.title() + '"')
+	print(" ")
+	print('the price is $' + str(price))
+	buy = input('would you like yo buy it ')
+	buy1 = buy.strip()
+	if buy1 == 'yes':
+		if money < price:
+			print('you do not have enoph money. You need $' + str(price - money),'more')
+		if money >= price:
+			money = money - price
+			list = (word1,none)
+			none = word1
+			print('you now own',word1)
+			print('your properties\n',list)
+	print(" ")
+	if word1.strip() == 'go':
+		money = money + 500
+		print('you gained $3,587,226 for landing on Go')
+	if word1.strip() == 'free parking':
+		money = money + 750
+		print('you gained $7174452 for landing on free parking')
+	if word1.strip() == 'community chest':
+		money = money + 1000
+		print('you gained $1000 for landing on community chest')
