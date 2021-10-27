@@ -1,0 +1,16 @@
+import random
+heads = 0
+tails = 0
+listr = ['Heads','Tails']
+s = random.choice(listr)
+time = int(input('how many times would you like to flip a coin? '))
+for x in range(time):
+	listr = ['Heads','Tails',s]
+	list = random.choice(listr)
+	print(list)
+	if list == 'Heads':
+		heads = heads + 1
+	if list == 'Tails':
+		tails = tails + 1
+print('for heads you got',heads)
+print('for tails you got',tails)
