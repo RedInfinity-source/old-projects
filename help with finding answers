@@ -1,26 +1,36 @@
 import random
+# answer choices
 a = 0
 b = 0
 c = 0
 d = 0
 e = 0
-k = 0
+
+# loop
 while True:
-	y = input('')
-	if y == 'a':
-		a = a + 1
-	elif y == 'b':
-		b = b + 1
-	elif y == 'c':
-		c = c + 1
-	elif y == 'd':
-		d = d + 1
-	elif y == 'e':
-		e = e + 1
-	else:
-		print('invalid text')
-	if y == 'i':
-		list = [a,b,c,d,e]
-		print("                        "+"A ,B ,C ,D ,E")
-		print ("The original list is : " + str(list))
-		print('or choice one of the',random.choice(list))
+    answer_input = input('answer input > ')
+    # finding the best answer
+    if 'a' in answer_input:
+        a = a + 1
+    elif 'b' in answer_input:
+        b = b + 1
+    elif 'c' in answer_input:
+        c = c + 1
+    elif 'd' in answer_input:
+        d = d + 1
+    elif 'e' in answer_input:
+        e = e + 1
+    else:
+    	# showing the data
+        if 's' or 'show' in answer_input:
+            list = [a, b, c, d, e]
+            letter_list = ["A","B","C","D","E"]
+            print("                        " + "A  B  C  D  E")
+            print("The original list is : " + str(list))
+
+            number = max(list)
+            find_number = list.index(max(list))
+            print("according to the data {} is the biggest number, thus {} is the best letter to use".format(number,letter_list[find_number]))
+            print('or choice the letter', random.choice(letter_list))
+        else:
+            print('invalid if you need to look at the data type "show" or "s"')
